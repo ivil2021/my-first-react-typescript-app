@@ -1,26 +1,21 @@
-import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import { Greeting } from './components/Greeting';
+import { Profile } from './components/Profile';
+import { ShoppingList } from './components/ShoppingList';
 
-function App() {
+export function App() {
+  const items = [
+    { id: 1, name: 'Яблоки', price: 5 },
+    { id: 2, name: 'Бананы', price: 15 },
+    { id: 3, name: 'Апельсины', price: 25 },
+  ];
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Greeting name="Аня" />
+      <Greeting name="Андрей" />
+      <Profile name="Аня" age={23} location="Таганрог" />
+      <ShoppingList items={items} />
     </div>
   );
 }
-
-export default App;
