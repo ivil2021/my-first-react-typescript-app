@@ -2,6 +2,9 @@ import './App.css';
 import { Greeting } from './components/Greeting';
 import { Profile } from './components/Profile';
 import { ShoppingList } from './components/ShoppingList';
+import { Counter } from './components/Counter';
+import { InputField } from './components/InputField';
+import { Toggle } from './components/Toggle';
 
 export function App() {
   const items = [
@@ -16,6 +19,9 @@ export function App() {
       <Greeting name="Андрей" />
       <Profile name="Аня" age={23} location="Таганрог" />
       <ShoppingList items={items} />
+      <Counter />
+      <InputField />
+      <Toggle />
     </div>
   );
 }

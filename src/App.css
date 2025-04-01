@@ -44,6 +44,7 @@
   padding: 10px;
   margin: 0 auto;
   border: 3px solid black;
+  margin-top: 10px;
 }
 
 .shopping-list {
@@ -53,4 +54,15 @@
   padding: 10px;
   margin: 0 auto;
   border: 3px solid black;
+  margin-top: 10px;
+}
+
+.counter, .input-field, .toggle {
+  background-color: lightblue;
+  width: 300px;
+  border-radius: 15px;
+  padding: 10px;
+  margin: 0 auto;
+  border: 3px solid black;
+  margin-top: 10px;
 }
