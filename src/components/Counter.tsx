@@ -4,9 +4,9 @@
 Выводите текущее значение счетчика на экран.
 */
 
-import React, { useState } from 'react';
+import { useState } from 'react';
 
-export const Counter: React.FC = () => {
+export function Counter () {
   const [count, setCount] = useState(0);
 
   const countPlus = () => {

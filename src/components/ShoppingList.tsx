@@ -5,19 +5,17 @@
 Используйте уникальный key для каждого элемента списка.
 */
 
-// import React from 'react';
-
-interface Item {
+interface IItem {
   id: number;
   name: string;
   price: number;
 }
 
-interface ShoppingListProps {
-  items: Item[];
+interface IShoppingListProps {
+  items: IItem[];
 }
 
-export const ShoppingList: React.FC<ShoppingListProps> = ({ items }) => {
+export function ShoppingList ({ items }: IShoppingListProps) {
   return (
     <div className="shopping-list">
         <div><h1>Список покупок</h1></div>

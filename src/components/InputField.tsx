@@ -3,9 +3,9 @@
 При каждом изменении поля отображайте текущее значение ниже текстового поля.
 */
 
-import React, { useState } from 'react';
+import { useState } from 'react';
 
-export const InputField: React.FC = () => {
+export function InputField () {
   const [inputValue, setInputValue] = useState<string>('');
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {

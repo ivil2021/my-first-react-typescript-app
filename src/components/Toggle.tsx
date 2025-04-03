@@ -3,9 +3,9 @@
 Отображайте текст "Включено" или "Выключено" в зависимости от текущего состояния и добавьте кнопку для переключения.
 */
 
-import React, { useState } from 'react';
+import { useState } from 'react';
 
-export const Toggle: React.FC = () => {
+export function Toggle () {
   const [isOn, setIsOn] = useState<boolean>(false);
 
   const toggleSwitch = () => {

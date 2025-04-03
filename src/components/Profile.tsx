@@ -4,21 +4,19 @@
 под которым будут перечислены имя, возраст и местоположение.
 */
 
-// import React from 'react';
-
-interface ProfileProps {
+interface IProfileProps {
   name: string;
   age: number;
   location: string;
 }
 
-export const Profile: React.FC<ProfileProps> = ({ name, age, location }) => {
+export function Profile ({ name, age, location }: IProfileProps) {
   return (
     <div className="profile-card">
-      <div><h1>{'Профиль пользователя'}</h1></div>
-      <div>{`Имя: ${name}`}</div>
-      <div>{`Возраст: ${age}`}</div>
-      <div>{`Локация: ${location}`}</div>
+      <div><h1>Профиль пользователя</h1></div>
+      <div>Имя: {name}</div>
+      <div>Возраст: {age}</div>
+      <div>Локация: {location}</div>
     </div>
   );
 }

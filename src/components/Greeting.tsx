@@ -4,12 +4,10 @@
 Используйте этот компонент в основном приложении, передавая разные имена.
 */
 
-// import React from 'react';
-
-interface GreetingProps {
+interface IGreetingProps {
   name: string;
 }
 
-export const Greeting: React.FC<GreetingProps> = ({ name }) => {
+export function Greeting({ name }: IGreetingProps) {
   return <h1>Привет, {name}!</h1>;
 };
