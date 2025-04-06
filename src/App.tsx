@@ -31,7 +31,6 @@ export function App() {
     { id: 3, text: 'Задача 3', completed: false },
   ]);
 
-  // Мемоизированная функция для обновления статуса выполненной задачи
   const toggleTodo = useCallback((id: number) => {
     setTodos(prevTodos =>
       prevTodos.map(todo =>
