@@ -71,7 +71,13 @@
 }
 
 .button-list,
-.todo-list {
+.todo-list,
+.fetch-data,
+.window-width,
+.form,
+.expensive-calculation,
+.filtered-list,
+.total-price {
   background-color: lightblue;
   width: 300px;
   border-radius: 15px;

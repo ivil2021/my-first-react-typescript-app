@@ -8,9 +8,15 @@ import { Toggle } from './components/Toggle';
 import { ButtonList } from './components/ButtonList';
 import { Counter2 } from './components/Counter2';
 import { TodoList } from './components/TodoList';
+import { ITodo } from './components/types';
+import { FetchData } from './components/FetchData';
+import { WindowWidth } from './components/WindowWidth';
+import { Form } from './components/Form';
+import { ExpensiveCalculation } from './components/ExpensiveCalculation';
+import { FilteredList } from './components/FilteredList';
+import { TotalPrice } from './components/TotalPrice';
 
 import { useState, useCallback } from 'react';
-import { ITodo } from './components/types';
 
 export function App() {
   const items = [
@@ -39,6 +45,16 @@ export function App() {
     );
   }, []);
 
+  const itemsToFilter = [
+    'Tea',
+    'Coffee',
+    'Juice',
+    'Water',
+    'Milk'
+  ];
+
+  const prices = [5, 15, 90, 45, 100];
+
   return (
     <div className="App">
       <Greeting name="Аня" />
@@ -51,6 +67,12 @@ export function App() {
       <ButtonList buttons={buttons} />
       <Counter2 />
       <TodoList todos={todos} toggleTodo={toggleTodo} />
+      <FetchData />
+      <WindowWidth />
+      <Form />
+      <ExpensiveCalculation number={3} />
+      <FilteredList items={itemsToFilter} />
+      <TotalPrice prices={prices} />
     </div>
   );
 }
