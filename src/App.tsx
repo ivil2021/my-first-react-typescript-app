@@ -15,6 +15,8 @@ import { Form } from './components/Form';
 import { ExpensiveCalculation } from './components/ExpensiveCalculation';
 import { FilteredList } from './components/FilteredList';
 import { TotalPrice } from './components/TotalPrice';
+import { ThemeToggle } from './components/ThemeToggle';
+import { ThemeProvider } from './components/ThemeContext';
 
 import { useState, useCallback } from 'react';
 
@@ -73,6 +75,13 @@ export function App() {
       <ExpensiveCalculation number={3} />
       <FilteredList items={itemsToFilter} />
       <TotalPrice prices={prices} />
+
+      <ThemeProvider>
+        <div  className="theme-toggle">
+          <h1>Выбор темы</h1>
+          <ThemeToggle />
+        </div>
+      </ThemeProvider>
     </div>
   );
 }
