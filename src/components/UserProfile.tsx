@@ -1,3 +1,9 @@
+/*
+Реализуйте компонент UserProvider,
+который использует useContext для передачи информации о пользователе (имя и email) дочерним компонентам.
+Создайте компонент UserProfile, который отображает информацию о пользователе.
+*/
+
 import { useUser } from './UserContext';
 
 export function UserProfile () {

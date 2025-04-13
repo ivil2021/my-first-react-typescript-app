@@ -1,3 +1,8 @@
+/*
+Напишите компонент LanguageSelector, который использует useContext для изменения текущего языка в приложении.
+Создайте контекст LanguageContext, который будет хранить информацию о выбранном языке и позволять переключаться между языками.
+*/
+
 import { useLanguage } from './LanguageContext';
 
 export function LanguageSelector () {

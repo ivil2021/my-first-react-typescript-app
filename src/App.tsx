@@ -27,6 +27,8 @@ import { UserProfile } from './components/UserProfile';
 import { LanguageProvider } from './components/LanguageContext';
 import { LanguageSelector } from './components/LanguageSelector';
 
+import { FocusInput } from './components/FocusInput';
+
 export function App() {
   const items = [
     { id: 1, name: 'Яблоки', price: 5 },
@@ -119,6 +121,8 @@ export function App() {
           <LanguageSelector />
         </div>
       </LanguageProvider>
+
+      <FocusInput />
     </div>
   );
 }

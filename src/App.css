@@ -80,7 +80,8 @@
 .total-price,
 .theme-toggle,
 .user-profile,
-.language-provider {
+.language-provider,
+.focus-input {
   background-color: lightblue;
   width: 300px;
   border-radius: 15px;
