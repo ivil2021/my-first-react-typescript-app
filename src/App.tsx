@@ -20,6 +20,10 @@ import { ThemeProvider } from './components/ThemeContext';
 
 import { useState, useCallback } from 'react';
 
+import { useEffect } from 'react';
+import { UserProvider, useUser } from './components/UserContext';
+import { UserProfile } from './components/UserProfile';
+
 export function App() {
   const items = [
     { id: 1, name: 'Яблоки', price: 5 },
@@ -57,6 +61,21 @@ export function App() {
 
   const prices = [5, 15, 90, 45, 100];
 
+  const SetUser: React.FC = () => {
+    const { setUser } = useUser();
+  
+    useEffect(() => {
+      const userData = {
+        name: 'Ann Pavlova',
+        email: 'ann.pavlova@gmale.com',
+      };
+      
+      setUser(userData);
+    }, [setUser]);
+  
+    return null;
+  };
+
   return (
     <div className="App">
       <Greeting name="Аня" />
@@ -77,11 +96,19 @@ export function App() {
       <TotalPrice prices={prices} />
 
       <ThemeProvider>
-        <div  className="theme-toggle">
+        <div className="theme-toggle">
           <h1>Выбор темы</h1>
           <ThemeToggle />
         </div>
       </ThemeProvider>
+
+      <UserProvider>
+        <div className="user-profile">
+          <h1>Информация о пользователе</h1>
+          <SetUser />
+          <UserProfile />
+        </div>
+      </UserProvider>
     </div>
   );
 }

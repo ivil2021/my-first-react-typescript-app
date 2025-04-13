@@ -78,7 +78,8 @@
 .expensive-calculation,
 .filtered-list,
 .total-price,
-.theme-toggle {
+.theme-toggle,
+.user-profile {
   background-color: lightblue;
   width: 300px;
   border-radius: 15px;
