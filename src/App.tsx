@@ -28,6 +28,8 @@ import { LanguageProvider } from './components/LanguageContext';
 import { LanguageSelector } from './components/LanguageSelector';
 
 import { FocusInput } from './components/FocusInput';
+import { Timer } from './components/Timer';
+
 
 export function App() {
   const items = [
@@ -123,6 +125,7 @@ export function App() {
       </LanguageProvider>
 
       <FocusInput />
+      <Timer />
     </div>
   );
 }

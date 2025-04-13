@@ -81,7 +81,8 @@
 .theme-toggle,
 .user-profile,
 .language-provider,
-.focus-input {
+.focus-input,
+.timer {
   background-color: lightblue;
   width: 300px;
   border-radius: 15px;
