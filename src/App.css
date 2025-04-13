@@ -79,7 +79,8 @@
 .filtered-list,
 .total-price,
 .theme-toggle,
-.user-profile {
+.user-profile,
+.language-provider {
   background-color: lightblue;
   width: 300px;
   border-radius: 15px;

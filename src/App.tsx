@@ -24,6 +24,9 @@ import { useEffect } from 'react';
 import { UserProvider, useUser } from './components/UserContext';
 import { UserProfile } from './components/UserProfile';
 
+import { LanguageProvider } from './components/LanguageContext';
+import { LanguageSelector } from './components/LanguageSelector';
+
 export function App() {
   const items = [
     { id: 1, name: 'Яблоки', price: 5 },
@@ -109,6 +112,13 @@ export function App() {
           <UserProfile />
         </div>
       </UserProvider>
+
+      <LanguageProvider>
+        <div className="language-provider">
+          <h1>Выбор языка</h1>
+          <LanguageSelector />
+        </div>
+      </LanguageProvider>
     </div>
   );
 }
