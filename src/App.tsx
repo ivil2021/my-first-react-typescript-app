@@ -29,7 +29,7 @@ import { LanguageSelector } from './components/LanguageSelector';
 
 import { FocusInput } from './components/FocusInput';
 import { Timer } from './components/Timer';
-
+import { ImagePreview } from './components/ImagePreview';
 
 export function App() {
   const items = [
@@ -126,6 +126,7 @@ export function App() {
 
       <FocusInput />
       <Timer />
+      <ImagePreview />
     </div>
   );
 }

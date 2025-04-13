@@ -82,7 +82,8 @@
 .user-profile,
 .language-provider,
 .focus-input,
-.timer {
+.timer,
+.image-preview {
   background-color: lightblue;
   width: 300px;
   border-radius: 15px;
