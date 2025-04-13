@@ -1,3 +1,10 @@
+/*
+Создайте контекст ThemeContext,
+который хранит информацию о текущей теме (светлая или темная).
+Напишите компонент ThemeToggle, который использует useContext
+для переключения темы и отображает текущую тему на экране.
+*/
+
 import { useTheme } from './ThemeContext';
 
 export function ThemeToggle () {
