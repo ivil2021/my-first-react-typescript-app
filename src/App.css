@@ -83,7 +83,8 @@
 .language-provider,
 .focus-input,
 .timer,
-.image-preview {
+.image-preview,
+.button {
   background-color: lightblue;
   width: 300px;
   border-radius: 15px;

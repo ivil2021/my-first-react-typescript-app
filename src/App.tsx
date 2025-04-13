@@ -31,6 +31,8 @@ import { FocusInput } from './components/FocusInput';
 import { Timer } from './components/Timer';
 import { ImagePreview } from './components/ImagePreview';
 
+import { Button } from './components/Button';
+
 export function App() {
   const items = [
     { id: 1, name: 'Яблоки', price: 5 },
@@ -127,6 +129,10 @@ export function App() {
       <FocusInput />
       <Timer />
       <ImagePreview />
+
+      <Button backgroundColor="#28a745" color="#ffffff">
+        Нажми меня
+      </Button >
     </div>
   );
 }
