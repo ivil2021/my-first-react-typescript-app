@@ -18,7 +18,7 @@ import { TotalPrice } from './components/TotalPrice';
 import { ThemeToggle } from './components/ThemeToggle';
 import { ThemeProvider } from './components/ThemeContext';
 
-import { useState, useCallback } from 'react';
+import { useState, useCallback, useMemo } from 'react';
 
 import { useEffect } from 'react';
 import { UserProvider, useUser } from './components/UserContext';
@@ -90,6 +90,30 @@ export function App() {
     return null;
   };
 
+  const cardsInfo = [
+    {
+        image: image1,
+        title: 'заголовок карточки 1',
+        description: 'описание карточки 1',
+    },
+    {
+        image: image2,
+        title: 'заголовок карточки 2',
+        description: 'описание карточки 2',
+    },
+    {
+        image: image3,
+        title: 'заголовок карточки 3',
+        description: 'описание карточки 3',
+    }
+  ];
+
+  const cardsToRender = useMemo(() => {
+      return cardsInfo.map((item, index) => (
+        <Card key={index} image={item.image} title={item.title} description={item.description} />
+      ));
+  }, [cardsInfo]);
+
   return (
     <div className="App">
       <Greeting name="Аня" />
@@ -139,9 +163,8 @@ export function App() {
         Нажми меня
       </Button >
 
-      <Card image={image1} title='заголовок карточки 1' description='описание карточки 1' />
-      <Card image={image2} title='заголовок карточки 2' description='описание карточки 2' />
-      <Card image={image3} title='заголовок карточки 3' description='описание карточки 3' />
+      {cardsToRender}
+
     </div>
   );
 }
