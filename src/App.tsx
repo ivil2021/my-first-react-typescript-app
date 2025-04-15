@@ -34,9 +34,9 @@ import { ImagePreview } from './components/ImagePreview';
 import { Button } from './components/Button';
 
 import { Card } from './components/Card';
-import image1 from "./components/Card/photo1.jpg";
-import image2 from "./components/Card/photo2.jpg";
-import image3 from "./components/Card/photo3.jpg";
+import image1 from "./img/photo1.jpg";
+import image2 from "./img/photo2.jpg";
+import image3 from "./img/photo3.jpg";
 
 export function App() {
   const items = [
