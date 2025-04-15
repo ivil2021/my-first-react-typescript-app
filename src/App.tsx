@@ -139,9 +139,9 @@ export function App() {
         Нажми меня
       </Button >
 
-      <Card image={image1} title={'заголовок карточки 1'} description={'описание карточки 1'} />
-      <Card image={image2} title={'заголовок карточки 2'} description={'описание карточки 2'} />
-      <Card image={image3} title={'заголовок карточки 3'} description={'описание карточки 3'} />
+      <Card image={image1} title='заголовок карточки 1' description='описание карточки 1' />
+      <Card image={image2} title='заголовок карточки 2' description='описание карточки 2' />
+      <Card image={image3} title='заголовок карточки 3' description='описание карточки 3' />
     </div>
   );
 }
