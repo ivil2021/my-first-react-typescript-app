@@ -38,7 +38,10 @@ import image1 from "./img/photo1.jpg";
 import image2 from "./img/photo2.jpg";
 import image3 from "./img/photo3.jpg";
 
-import { ThemeToggle2 } from './components/ThemeToggle2/index';
+// import { ThemeToggle2 } from './components/ThemeToggle2/index';
+
+import { TTThemeToggle } from './components/TTThemeToggle/TTThemeToggle';
+import { AppContainer, Card2 } from './components/TTThemeToggle/index.styles';
 
 
 export function App() {
@@ -117,6 +120,12 @@ export function App() {
       ));
   }, [cardsInfo]);
 
+  const [isDark, setIsDark] = useState(false);
+
+  const toggleTheme = () => {
+    setIsDark(prev => !prev);
+  };
+
   return (
     <div className="App">
       <Greeting name="Аня" />
@@ -169,11 +178,19 @@ export function App() {
       <ThemeProvider>
         <div className="theme-toggle">
           <h1>Выбор темы</h1>
-          <ThemeToggle2 background="#ffffff" text="qwqerty" buttonBackground="#333333" buttonText="zxfd" />
+          {/* <ThemeToggle2 background="#ffffff" text="qwqerty" buttonBackground="#333333" buttonText="zxfd" /> */}
         </div>
       </ThemeProvider>
 
       {cardsToRender}
+
+      <AppContainer isDark={isDark}>
+            <Card2 isDark={isDark}>
+                <h1>Смена темы</h1>
+                <p>Текущая тема — {isDark ? 'тёмная' : 'светлая'}</p>
+            </Card2>
+            <TTThemeToggle toggleTheme={toggleTheme} isDark={isDark} />
+      </AppContainer>
 
     </div>
   );

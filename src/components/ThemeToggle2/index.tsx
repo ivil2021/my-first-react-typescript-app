@@ -18,29 +18,29 @@ interface IThemeToggle2Props {
   buttonText: string,
 }
 
-export function ThemeToggle2 ({ background, text, buttonBackground, buttonText }: IThemeToggle2Props) {
-  const { theme, toggleTheme } = useTheme();
+// export function ThemeToggle2 ({ background, text, buttonBackground, buttonText }: IThemeToggle2Props) {
+//   const { theme, toggleTheme } = useTheme();
 
-  return (
-      <ThemeProvider>
-          <Container
-            background={background}
-            text={text}
-          >
-              <ToggleButton
-                onClick={toggleTheme}
-                buttonBackground={buttonBackground}
-                buttonText={buttonText}>
-                  Переключить на {theme === 'lightTheme' ? 'темную' : 'светлую'} тему
-              </ToggleButton>
-              <Content>
-                  <h1>Пример переключения темы</h1>
-                  <p>Текущая тема — {theme === 'lightTheme' ? 'темную' : 'светлую'}</p>
-              </Content>
-          </Container>
-      </ThemeProvider>
-  );
-};
+//   return (
+//       <ThemeProvider>
+//           <Container
+//             background={background}
+//             text={text}
+//           >
+//               <ToggleButton
+//                 onClick={toggleTheme}
+//                 buttonBackground={buttonBackground}
+//                 buttonText={buttonText}>
+//                   Переключить на {theme === 'lightTheme' ? 'темную' : 'светлую'} тему
+//               </ToggleButton>
+//               <Content>
+//                   <h1>Пример переключения темы</h1>
+//                   <p>Текущая тема — {theme === 'lightTheme' ? 'темную' : 'светлую'}</p>
+//               </Content>
+//           </Container>
+//       </ThemeProvider>
+//   );
+// };
 
 
 // --------------
