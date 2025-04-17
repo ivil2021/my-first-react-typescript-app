@@ -38,6 +38,9 @@ import image1 from "./img/photo1.jpg";
 import image2 from "./img/photo2.jpg";
 import image3 from "./img/photo3.jpg";
 
+import { ThemeToggle2 } from './components/ThemeToggle2/index';
+
+
 export function App() {
   const items = [
     { id: 1, name: 'Яблоки', price: 5 },
@@ -162,6 +165,13 @@ export function App() {
       <Button backgroundColor="#28a745" color="#ffffff">
         Нажми меня
       </Button >
+
+      <ThemeProvider>
+        <div className="theme-toggle">
+          <h1>Выбор темы</h1>
+          <ThemeToggle2 background="#ffffff" text="qwqerty" buttonBackground="#333333" buttonText="zxfd" />
+        </div>
+      </ThemeProvider>
 
       {cardsToRender}
 
